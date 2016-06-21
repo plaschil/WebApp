@@ -307,6 +307,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="Properties\PublishProfiles\plaschil.publishsettings" />
     <None Include="Properties\PublishProfiles\plaschil.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
