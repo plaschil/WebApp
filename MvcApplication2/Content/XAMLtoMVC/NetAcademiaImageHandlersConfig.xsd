@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="tacepao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="properties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="add">
+                <xs:complexType>
+                  <xs:attribute name="key" type="xs:string" use="required" />
+
+                  <xs:attribute name="basedOn" type="xs:string" use="optional" />
+                  <xs:attribute name="imageFormat" type="ImageFormat_Type" use="optional" />
+                  <xs:attribute name="imageBackgroundColor" type="xs:string" use="optional" />
+
+                  <xs:attribute name="command" type="xs:string" use="optional" />
+                  <xs:attribute name="connectionStringName" type="xs:string" use="optional" />
+
+                  <xs:attribute name="borderColor" type="xs:string" use="optional" />
+                  <xs:attribute name="borderThickness" type="xs:string" use="optional" />
+                  <xs:attribute name="cornerRadius" type="xs:string" use="optional" />
+                  
+                  <xs:attribute name="padding" type="xs:string" use="optional" />
+                  <xs:attribute name="margin" type="xs:string" use="optional" />
+                  
+                  <xs:attribute name="darkColor" type="xs:string" use="optional" />
+                  <xs:attribute name="backgroundColor" type="xs:string" use="optional" />
+                  <xs:attribute name="lightColor" type="xs:string" use="optional" />
+                  
+                  <xs:attribute name="shadowColor" type="xs:string" use="optional" />
+                  <xs:attribute name="shadowOpacity" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowBlurRadius" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowDirection" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowDepth" type="xs:decimal" use="optional" />
+                  
+                  <xs:attribute name="highlightColor" type="xs:string" use="optional" />
+                  <xs:attribute name="highlightOpacity" type="xs:decimal" use="optional" />
+                  <xs:attribute name="highlightBlurRadius" type="xs:decimal" use="optional" />
+                  <xs:attribute name="highlightMargin" type="xs:string" use="optional" />
+                  <xs:attribute name="highlightTransparentOffset" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="foreColor" type="xs:string" use="optional" />
+                  <xs:attribute name="fontFamily" type="xs:string" use="optional" />
+                  <xs:attribute name="fontSize" type="xs:decimal" use="optional" />
+                  <xs:attribute name="fontWeight" type="FontWeight_Type" use="optional" />
+                  <xs:attribute name="fontStyle" type="FontStyle_Type" use="optional" />
+                  <xs:attribute name="fontStretch" type="FontStretch_Type" use="optional" />
+                  
+                  <xs:attribute name="contentShadowColor" type="xs:string" use="optional" />
+                  <xs:attribute name="contentShadowOpacity" type="xs:decimal" use="optional" />
+                  <xs:attribute name="contentShadowBlurRadius" type="xs:decimal" use="optional" />
+                  <xs:attribute name="contentShadowDirection" type="xs:decimal" use="optional" />
+                  <xs:attribute name="contentShadowDepth" type="xs:decimal" use="optional" />
+                  
+                  <xs:attribute name="icon" type="xs:string" use="optional" />
+                  <xs:attribute name="iconWidth" type="xs:decimal" use="optional" />
+                  <xs:attribute name="iconHeight" type="xs:decimal" use="optional" />
+                  <xs:attribute name="iconBasePath" type="xs:string" use="optional" />
+                  
+                  <xs:attribute name="gap" type="xs:decimal" use="optional" />
+                  <xs:attribute name="iconPosition" type="IconPositions_Type" use="optional" />
+                  
+                  <xs:attribute name="rotation" type="xs:decimal" use="optional" />
+                  <xs:attribute name="contentRotation" type="xs:decimal" use="optional" />
+                  
+                  <xs:attribute name="width" type="xs:decimal" use="optional" />
+                  <xs:attribute name="height" type="xs:decimal" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="defaultIconBasePath" type="xs:string" use="optional" />
+            <xs:attribute name="defaultConnectionStringName" type="xs:string" use="optional" />
+            <xs:attribute name="defaultFontFamily" type="xs:string" use="optional" />
+            <xs:attribute name="defaultFontSize" type="xs:decimal" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:simpleType name="FontWeight_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Black" />
+      <xs:enumeration value="Bold" />
+      <xs:enumeration value="DemiBold" />
+      <xs:enumeration value="ExtraBold" />
+      <xs:enumeration value="ExtraBlack" />
+      <xs:enumeration value="ExtraLight" />
+      <xs:enumeration value="Heavy" />
+      <xs:enumeration value="Light" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Regular" />
+      <xs:enumeration value="SemiBold" />
+      <xs:enumeration value="Thin" />
+      <xs:enumeration value="UltraBlack" />
+      <xs:enumeration value="UltraBold" />
+      <xs:enumeration value="UltraLight" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ImageFormat_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Png" />
+      <xs:enumeration value="Jpeg" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="FontStyle_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Italic" />
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Oblique" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="FontStretch_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Condensed" />
+      <xs:enumeration value="Expanded" />
+      <xs:enumeration value="ExtraCondensed" />
+      <xs:enumeration value="ExtraExpanded" />
+      <xs:enumeration value="SemiCondensed" />
+      <xs:enumeration value="SemiExpanded" />
+      <xs:enumeration value="UltraCondensed" />
+      <xs:enumeration value="UltraExpanded" />
+      <xs:enumeration value="Medium" />
+      <xs:enumeration value="Normal" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+
+  <xs:simpleType name="IconPositions_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Background" />
+      <xs:enumeration value="Bottom" />
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="Right" />
+      <xs:enumeration value="Top" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="VerticalAlignment_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Bottom" />
+      <xs:enumeration value="Center" />
+      <xs:enumeration value="Stretch" />
+      <xs:enumeration value="Top" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="HorizontalAlignment_Type">
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="Left" />
+      <xs:enumeration value="Center" />
+      <xs:enumeration value="Stretch" />
+      <xs:enumeration value="Right" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="sqlImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="blobEntries">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="add">
+                <xs:complexType>
+                  <xs:attribute name="key" type="xs:string" use="required" />
+
+                  <xs:attribute name="imageFormat" type="ImageFormat_Type" use="optional" />
+                  <xs:attribute name="imageBackgroundColor" type="xs:string" use="optional" />
+
+
+                  <xs:attribute name="connectionStringName" type="xs:string" use="optional" />
+                  <xs:attribute name="command" type="xs:string" use="optional" />
+
+                  <xs:attribute name="maxWidth" type="xs:decimal" use="optional" />
+                  <xs:attribute name="maxHeight" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="width" type="xs:decimal" use="optional" />
+                  <xs:attribute name="height" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="padding" type="xs:string" use="optional" />
+                  <xs:attribute name="innerPadding" type="xs:string" use="optional" />
+
+                  <xs:attribute name="margin" type="xs:string" use="optional" />
+
+                  <xs:attribute name="cornerRadius" type="xs:string" use="optional" />
+                  <xs:attribute name="innerCornerRadius" type="xs:string" use="optional" />
+
+                  <xs:attribute name="backgroundColor" type="xs:string" use="optional" />
+                  <xs:attribute name="innerBackgroundColor" type="xs:string" use="optional" />
+
+                  <xs:attribute name="borderColor" type="xs:string" use="optional" />
+                  <xs:attribute name="borderThickness" type="xs:string" use="optional" />
+
+                  <xs:attribute name="innerBorderColor" type="xs:string" use="optional" />
+                  <xs:attribute name="innerBorderThickness" type="xs:string" use="optional" />
+
+                  <xs:attribute name="foreColor" type="xs:string" use="optional" />
+                  <xs:attribute name="fontFamily" type="xs:string" use="optional" />
+                  <xs:attribute name="fontSize" type="xs:decimal" use="optional" />
+                  <xs:attribute name="fontWeight" type="FontWeight_Type" use="optional" />
+                  <xs:attribute name="fontStyle" type="FontStyle_Type" use="optional" />
+                  <xs:attribute name="fontStretch" type="FontStretch_Type" use="optional" />
+                  <xs:attribute name="textHorizontalAlignment" type="HorizontalAlignment_Type" use="optional" />
+                  <xs:attribute name="textVerticalAlignment" type="VerticalAlignment_Type" use="optional" />
+                  <xs:attribute name="textMargin" type="xs:string" use="optional" />
+
+                  <xs:attribute name="rotation" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="shadowOpacity" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowBlurRadius" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowColor" type="xs:string" use="optional" />
+                  <xs:attribute name="shadowDirection" type="xs:decimal" use="optional" />
+                  <xs:attribute name="shadowDepth" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="image" type="xs:string" use="optional" />
+                  <xs:attribute name="imageHorizontalAlignment" type="HorizontalAlignment_Type" use="optional" />
+                  <xs:attribute name="imageVerticalAlignment" type="VerticalAlignment_Type" use="optional" />
+                  <xs:attribute name="imageWidth" type="xs:decimal" use="optional" />
+                  <xs:attribute name="imageHeight" type="xs:decimal" use="optional" />
+
+                  <xs:attribute name="watermark" type="xs:string" use="optional" />
+                  <xs:attribute name="watermarkWidth" type="xs:decimal" use="optional" />
+                  <xs:attribute name="watermarkHeight" type="xs:decimal" use="optional" />
+                  <xs:attribute name="watermarkMargin" type="xs:string" use="optional" />
+                  <xs:attribute name="watermarkHorizontalAlignment" type="HorizontalAlignment_Type" use="optional" />
+                  <xs:attribute name="watermarkVerticalAlignment" type="VerticalAlignment_Type" use="optional" />
+                  <xs:attribute name="watermarkOpacity" type="xs:decimal" use="optional" />
+                  
+                  <xs:attribute name="basedOn" type="xs:string" use="optional" />
+                  <xs:attribute name="imagesBasePath" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="defaultImagesBasePath" type="xs:string" use="optional" />
+            <xs:attribute name="defaultConnectionStringName" type="xs:string" use="optional" />
+            <xs:attribute name="defaultFontFamily" type="xs:string" use="optional" />
+            <xs:attribute name="defaultFontSize" type="xs:decimal" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="xamlToPng">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="2">
+        <xs:element name="xamlTemplates" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="add">
+                <xs:complexType>
+                  <xs:attribute name="key" type="xs:string" use="required" />
+
+                  <xs:attribute name="imageFormat" type="ImageFormat_Type" use="optional" />
+
+                  <xs:attribute name="command" type="xs:string" use="optional" />
+                  <xs:attribute name="assetsBasePath" type="xs:string" use="optional" />
+                  <xs:attribute name="xaml" type="xs:string" use="required" />
+                  <xs:attribute name="data" type="xs:string" use="optional" />
+                  <xs:attribute name="connectionStringName" type="xs:string" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="defaultConnectionStringName" type="xs:string" use="optional" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="data" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="add">
+                <xs:complexType>
+                  <xs:attribute name="key" type="xs:string" use="required" />
+                  <xs:anyAttribute namespace="##any" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

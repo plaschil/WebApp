@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+    th {background-color:#aaa;}
+        div.wikidoc h2{font-size:1.6em;}div.wikidoc h1,div.wikidoc h2,div.wikidoc h3,div.wikidoc h4,div.wikidoc h5,div.wikidoc h6{margin-bottom:.13em;}h2{color:Black;}h2{font-size:1.2em;padding-top:.7em;padding-bottom:.7em;}div.wikidoc h3{font-size:1.4em;}h3{font-size:1em;padding-bottom:0;}div.wikidoc pre,div.wikidoc div.csharpcode{background-color:#ECECEC !important;border:dashed .1em #3E62A6 !important;font-family:Consolas,"Courier New",Courier,Monospace !important;font-size:1em !important;margin-top:0;padding:.5em;padding-bottom:1.5em;height:auto;overflow:auto;width:100% !important;}div.wikidoc h1{font-size:2.0em;}h1{font-size:1.6em;margin-bottom:.7em;}a,a:link,a:visited{text-decoration:underline;color:#3E62A6;}
+    </style>
+</head>
+<body>
+
+    <div class="wikidoc">
+        <h2>
+            You have installed XAMLtoMVC!</h2>
+        You got a dll in your bin folder and reference list.<br />
+        You got several new config entries in your web.config file.<br />
+        You got XAMLtoMVC folder beneath the Conent and the Views folders of your 
+        project. These XAMLtoMVC folders contain samples for you. You should delete 
+        these folders after you played with and got know the samples. 
+        <h3>
+            Try this url in your web application</h3>
+        <pre>/XAMLtoMVC</pre>
+        <h3>
+            Try these extension methods in a vieww</h3>
+        <pre>@Html.Tacepao(&quot;leaf&quot;, &quot;Hello World!&quot;)
+@Html.SqlImage(&quot;polaroid&quot;, &quot;Seattle&quot;, &quot;http://www.varoskartyak.hu/images/Seattle/seattle1.jpg&quot;)@Html.XamlToPng(&quot;sample&quot;, new {smallpicture_download = &quot;http://fototipp.hu/files/u1/einstein-tongue-out.jpg&quot;, nickname=&quot; Einstein &quot;})</pre>
+        You got these new Html helper methods (with several overloads) and new config 
+        file entries to create your own beauties. The first parameter always a config 
+        entry key in wich you can set several display options.
+        <h1>
+            Tacepaoo</h1>
+        <b><i>Tacepao is for rendering decorative textual pictures to display them on 
+        html pages.</i></b><br />
+        You can configure Tacepao styles in the Web.config &lt;tacepao&gt; section with &lt;add 
+        /&gt; elements.
+        <br />
+        Tacepao styles can contain many visual properties including for example font 
+        family, size, decoration, background color, highlight color, text orientation, 
+        icon to use with text and so on. In the parameter list of the Html.Tacepao you 
+        give the style key, the text and/or icon to render with that style.
+        <br />
+        For more information see the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=TaCePao%20Configuration&amp;referringTitle=Quickstart%20after%20you%20installed">
+        TaCePao Configuration</a> and the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=TaCePao%20methods&amp;referringTitle=Quickstart%20after%20you%20installed">
+        TaCePao methods</a>.
+        <h1>
+            SqlImage</h1>
+        <b><i>SqlImage is for rendering decorated images to display them on html pages.</i></b><br />
+        You can decorate images from various sources (including databse blob field or 
+        web url) with frame, shadow, title and watermark.<br />
+        You can configure these visual styles in the Web.config &lt;sqlImages&gt; section with 
+        &lt;add /&gt; elements.
+        <br />
+        For more information see the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=SqlImage%20Configuration&amp;referringTitle=Quickstart%20after%20you%20installed">
+        SqlImage Configuration</a> and the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=SqlImage%20methods&amp;referringTitle=Quickstart%20after%20you%20installed">
+        SqlImage methods</a>.
+        <h1>
+            XamlToPng</h1>
+        <b><i>XamlToPng is for rendering a XAML template with a data dictionary as it&#39;s 
+        DataContext to an image.</i></b><br />
+        XamlToPng can do everything that the other two and more. But it requires you to 
+        know and be able to create your own XAML.
+        <br />
+        It collects data from three different sources to a dictionary. Calls WPF with a 
+        XAML file giving it the dictionary as a DataContext. WPF Renders the XAML onto a 
+        png and gives it back to you.
+        <br />
+        If you know XAML you can databind from the collected dictionary in a very 
+        convenient way.
+        <br />
+        For more information see the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=XamlToPng%20Configuration&amp;referringTitle=Quickstart%20after%20you%20installed">
+        XamlToPng Configuration</a> and the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=XamlToPng%20methods&amp;referringTitle=Quickstart%20after%20you%20installed">
+        XamlToPng methods</a>.
+        <h1>
+            Output cache</h1>
+        As you can imagine these tasks can use a lot of resources. It is worth to save 
+        the generated pictures to cache. Your config file must contain 
+        OutputCacheProfiles for each of these utils. You should not remove but modify it 
+        for your own needs.
+        <br />
+        For more informatin see the
+        <a href="http://xamltomvc.codeplex.com/wikipage?title=Output%20Cache&amp;referringTitle=Quickstart%20after%20you%20installed">
+        Output Cache</a><br />
+        <h3>
+            Intellisense for your config</h3>
+        After you installed XAMLtoMVC you have a NetAcademiaImageHandlersConfig.xsd file 
+        in your project&#39;s root. Place the <b>NetAcademiaImageHandlersConfig.xsd</b> to 
+        the <b>...\Xml\Schemas folder in the Visual Studio installation folder</b>.
+        <br />
+        In the same folder find the <b>catalog.xml</b> file and open it. Find the last 
+        entry in the SchemaCatalog block and duplicate that line. Overwrite the 
+        duplicated line&#39;s schema attribute to reference the previously copied 
+        NetAcademiaImageHandlersConfig.xsd.
+        <br />
+        It should looks somehow like this:<br />
+        <div style="BACKGROUND-COLOR: white; COLOR: black">
+            <pre><span style="COLOR: blue">&lt;</span><span style="COLOR: #a31515">Association</span> <span 
+                style="COLOR: red">extension</span><span style="COLOR: blue">=</span><span 
+                style="COLOR: black">&quot;</span><span style="COLOR: blue">config</span><span 
+                style="COLOR: black">&quot;</span> <span style="COLOR: red">schema</span><span 
+                style="COLOR: blue">=</span><span style="COLOR: black">&quot;</span><span 
+                style="COLOR: blue">%InstallRoot%/xml/schemas/NetAcademiaImageHandlersConfig.xsd</span><span 
+                style="COLOR: black">&quot;</span> <span style="COLOR: red">condition</span><span 
+                style="COLOR: blue">=</span><span style="COLOR: black">&quot;</span><span 
+                style="COLOR: blue">starts-with($TargetFrameworkMoniker, &#39;.NETFramework,Version=v4.&#39;) or $TargetFrameworkMoniker = &#39;&#39;</span><span 
+                style="COLOR: black">&quot;</span> <span style="COLOR: blue">/&gt;</span>
+</pre>
+        </div>
+        Save it back. (if security is in your way then save it anywhere and copy it back 
+        to overwrite the original).
+        <br />
+        Done! You got IntelliSense for these cool new features in your web.config. </div>
+
+
+</body>
+</html>

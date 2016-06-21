@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MvcApplication2.Models.Fenykep>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@foreach (var item in Model) {
+    @Html.SqlImage("polaroid", System.IO.Path.GetFileNameWithoutExtension(item.Fajlnev), @Url.Action("Get", "Image", new { id = item.FenykepID }, "http"))
+}
+
+
+@*@Html.Tacepao("leaf", "Hello World!")
+@Html.SqlImage("polaroid", "Seattle", "http://www.varoskartyak.hu/images/Seattle/seattle1.jpg")
+@Html.XamlToPng("sample", new { smallpicture_download = "http://fototipp.hu/files/u1/einstein-tongue-out.jpg", nickname = " Einstein " })*@

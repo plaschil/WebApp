@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = " XAMLtoMVC Samples";
+
+}
+
+<div style="color: #000; background-attachment:fixed; background-image: url('/Content/XAMLtoMVC/pstransparent.png'); padding: 5px;">
+<table style="outline: black solid 1px; width: 100%;">
+<tr><th colspan="3" style="background-color: #aaa; border-width: 0px;">Tacepao</th></tr>
+<tr>
+<td valign="middle" align="center">
+@Html.Tacepao("leaf", "Start")
+</td><td valign="middle">
+@Html.TacepaoInput("button", "Settings")
+</td><td valign="middle">
+@Html.TacepaoInput("tab", "Documentation", "http://storage.vidibit.com/xamltomvcnuget.png")
+</td>
+</tr>
+<tr>
+<th colspan="3" style="background-color: #aaa; border-width: 0px;">
+@Url.TacepaoUrl("leaf", "Start")
+</th>
+</tr>
+</table>
+<br />
+<br />
+<table style="outline: black solid 1px; width: 100%;">
+<tr><th colspan="3" style="background-color: #aaa; border-width: 0px;">SqlImage</th></tr>
+<tr>
+<td valign="middle" align="center">
+@Html.SqlImage("polaroid", "Budapest", "http://www.cityhotels.hu/pictures/budapest/65_parliament_budapest_hungary_500.jpg", null, null, new { style="position:relative; left: 30px;" })
+
+@Html.SqlImage("wikipedia", "Leonardo da Vinci", "@/thumb/b/ba/Leonardo_self.jpg/200px-Leonardo_self.jpg", 0, null, null)
+
+@Html.SqlImageInput("cartoon", "Nice Day", "http://i782.photobucket.com/albums/yy106/monkeytaz/CARTOON%20ANIMALS/4-1.png", -10, null,  new { style = "position:relative; left: -20px;" })
+</td>
+</tr>
+<tr>
+<th colspan="3" style="background-color: #aaa; border-width: 0px;">
+@Url.SqlImageUrl("wikipedia", "Leonardo da Vinci", "@/thumb/b/ba/Leonardo_self.jpg/200px-Leonardo_self.jpg", 0, null)
+</th>
+</tr>
+</table>
+
+<br />
+<br />
+<table style="outline: black solid 1px; width: 100%;">
+<tr><th colspan="3" style="background-color: #aaa; border-width: 0px;">SqlImage</th></tr>
+<tr>
+<td align="center">
+@Html.XamlToPng("sample", new { nickname = "   Tocsi   ", smallpicture_download = "http://download.codeplex.com/Project/Download/Avatar.ashx?DownloadId=210310" })
+</td>
+</tr>
+<tr>
+<th style="background-color: #aaa; border-width: 0px;">
+@Url.XamlToPngUrl("sample", new { nickname = "   Tocsi   ", smallpicture_download = "http://download.codeplex.com/Project/Download/Avatar.ashx?DownloadId=210310" }) 
+</th>
+</tr>
+</table>
+</div>
